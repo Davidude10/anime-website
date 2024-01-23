@@ -1,26 +1,42 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e6f6f7;
+    margin: 0;
 }
-.col-3{
-max-width: 25%;
-border: solid black;
-display: block;
-padding: 20px;
+
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: #167ec4;
 }
-.col-9{
-    max-width: 75%;
-    display: block;
-    padding :20px;
+
+.heading {
+    color: rgb(206, 2, 2);
+    font-style: initial;
+    text-shadow: 2px 2px yellow, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.col-3,
+.col-9 {
+    flex: 1;
+}
+
 .col-3 {
     background-color: #37c6ff;
     color: #fff;
     padding: 20px;
-    
 }
 
 .col-3 h1 {
@@ -36,7 +52,6 @@ padding: 20px;
 
 .col-3 ul li {
     margin-bottom: 10px;
-    
 }
 
 .col-3 a {
@@ -44,16 +59,12 @@ padding: 20px;
     color: black;
     font-weight: bolder;
 }
+
 .col-3 a:hover {
-    color:red;
+    color: red;
     background-color: #08123a;
 }
-.container {
-    display: flex;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
 .col-9 {
     background-color: #fff;
     padding: 20px;
@@ -74,65 +85,29 @@ padding: 20px;
     list-style-type: disc;
     margin-left: 20px;
 }
-h2{
-    color: green;
-    background-color: rgb(138, 235, 125);
-    padding: 20px;
-}
-.navbar img{
-    align-items: center;
-}
-.intro{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: blue;
-    font-weight: lighter;
-}
-footer{
-    padding: 20px;
-    text-align: center;
-    background-color: #1c285a;color: #fff;
-    max-width: 100%;
-}
-header{
-    padding: 5px;
-    text-align: center;
-    background-color: #167ec4;
-    max-width: 100%;
-}
-.heading
-{
 
-
-
-    
-    color: rgb(206, 2, 2);
-    font-style: initial;
-    text-shadow: 2px 2px yellow,-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.search i{
+.search i {
     display: inline-block;
     padding: 5px;
 }
-.gen{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(114, 45, 18);
-    font-weight: lighter;
-}
-.genres
-{
-    background-color: rgb(200, 231, 171);
-}
+
 .anime-image {
     display: block;
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
 }
-h3{
-    color: rgb(0, 0, 158);
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1c285a;
+    color: #fff;
 }
-.anime-description{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(114, 45, 18);
-    font-weight: lighter;
+
+@media screen and (max-width: 768px) {
+    .col-3, .col-9 {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
